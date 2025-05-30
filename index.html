@@ -1,61 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>ICT Strategy Signal</title>
-  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
   <style>
-    body { font-family: Arial; padding: 20px; }
-    #chart { height: 400px; }
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 6px;
-      margin-top: 20px;
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    p {
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-
-  <h2>📈 ICT Strategy Chart</h2>
-  <div id="chart"></div>
-
-  <button onclick="sendTelegram()">🚀 Send Test Signal</button>
-
-  <script>
-    // Telegram setup
-    const TELEGRAM_TOKEN = "8047148300:AAFzSHgWDMPiWa5XHrYbhLg8l5qUBqonqQo";
-    const CHAT_ID = "-1002514665791";
-
-    function sendTelegram() {
-      const message = `🚀 ICT Strategy Signal:\nType: Long\nPrice: 18300\nSL: 18240\nTP: 18420`;
-      fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message
-        })
-      }).then(res => alert("📤 Signal Sent to Telegram!"));
-    }
-
-    // Basic chart
-    const chart = LightweightCharts.createChart(document.getElementById('chart'), {
-      width: 700,
-      height: 400
-    });
-    const lineSeries = chart.addLineSeries();
-    lineSeries.setData([
-      { time: 1688006400, value: 18000 },
-      { time: 1688092800, value: 18150 },
-      { time: 1688179200, value: 18300 },
-      { time: 1688265600, value: 18200 },
-      { time: 1688352000, value: 18350 },
-    ]);
-  </script>
-
+  <h1>🚀 ICT Strategy Signals</h1>
+  <p>Welcome to the live signal monitoring page.</p>
+  <p>Telegram alerts integration coming soon...</p>
 </body>
 </html>
